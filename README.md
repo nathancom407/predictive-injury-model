@@ -14,7 +14,7 @@ This project provides a FastAPI-based machine learning inference API to predict 
 
 ## Model Selection Guide
 
-This API predicts **severe pitcher injuries**, specifically those requiring **Tommy John surgery**. Based on your priorities (e.g. catching all possible injuries vs. avoiding false alarms), different models offer different advantages:
+This API predicts **very rare, severe pitcher injuries**, specifically those requiring **Tommy John surgery**. Based on your priorities (e.g. catching all possible injuries vs. avoiding false alarms), different models offer different advantages:
 
 | Model                     | Use Case Summary |
 |--------------------------|------------------|
