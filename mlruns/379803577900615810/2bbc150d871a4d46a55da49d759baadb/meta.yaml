@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/natha/OneDrive/Desktop/Github%20Projects/MLB%20Predictive%20Model/mlruns/379803577900615810/2bbc150d871a4d46a55da49d759baadb/artifacts
+end_time: 1747715971422
+entry_point_name: ''
+experiment_id: '379803577900615810'
+lifecycle_stage: active
+run_id: 2bbc150d871a4d46a55da49d759baadb
+run_name: debonair-swan-321
+run_uuid: 2bbc150d871a4d46a55da49d759baadb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747715971359
+status: 4
+tags: []
+user_id: natha

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/natha/OneDrive/Desktop/Github%20Projects/MLB%20Predictive%20Model/mlruns/603553110964621115/a3cbb0cd9f99469a9a606adc523e2646/artifacts
+end_time: 1747715802574
+entry_point_name: ''
+experiment_id: '603553110964621115'
+lifecycle_stage: active
+run_id: a3cbb0cd9f99469a9a606adc523e2646
+run_name: angry-crow-4
+run_uuid: a3cbb0cd9f99469a9a606adc523e2646
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747715802488
+status: 4
+tags: []
+user_id: natha
