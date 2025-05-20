@@ -1,6 +1,6 @@
 # MLB Pitcher Injury Risk Prediction API
 
-This project provides a FastAPI-based machine learning inference API to predict injury risk for MLB pitchers using different classification models (XGBoost, Random Forest, and Logistic Regression). It is designed to support model comparison and experimentation.
+This project provides a FastAPI-based machine learning inference API to predict severe arm-injury (Tommy John Surgery) risk for MLB pitchers using different classification models (XGBoost, Random Forest, and Logistic Regression). It is designed to support model comparison, experimentation, and supervised learning.
 
 ## Features
 
@@ -12,6 +12,22 @@ This project provides a FastAPI-based machine learning inference API to predict 
 - Dynamically plots feature effect on predicted injury probability
 - Designed with modular notebooks and API files
 
+## Model Selection Guide
+
+This API predicts **severe pitcher injuries**, specifically those requiring **Tommy John surgery**. Based on your priorities (e.g. catching all possible injuries vs. avoiding false alarms), different models offer different advantages:
+
+| Model                     | Use Case Summary |
+|--------------------------|------------------|
+| **Logistic Regression (Raw)** | Captures **70% of actual injuries** (highest injured recall). Ideal for **conservative use cases** where missing an injury is costly. Tends to produce **more false positives**, so healthy pitchers may also be flagged. Use this model if **you want to catch as many injury cases as possible**, even if it includes false alarms. |
+| **Random Forest (Tuned)**     | Captures **81% of healthy cases** with fewer false positives, but only identifies **40% of injuries**. Best suited when the cost of false positives is high. Use this model if **you prefer precision and are okay with missing some injury cases**. |
+| **XGBoost (Post-Lasso)**      | Offers the **best overall performance** (highest average F1 score: 0.60). Strikes a **balance between detecting injuries and avoiding false positives**. Recommended as the **default model** for most use cases. |
+
+### Default Recommendation:
+Use **XGBoost (Post-Lasso)** for a balanced approach.  
+Use **Logistic Regression** for conservative, injury-averse strategies.  
+Use **Random Forest** to reduce false positives in high-stakes environments.
+
+> ⚠️ Note: This model is trained to predict **severe injuries** that typically result in **Tommy John surgery**, not minor or short-term issues.
 ---
 
 ## Project Structure
